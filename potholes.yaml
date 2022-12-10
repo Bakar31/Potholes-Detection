@@ -1,0 +1,7 @@
+
+train: ../dataset/images/train # train images (relative to 'path') 118287 images
+val: ../dataset/images/val # val images (relative to 'path') 5000 images
+
+nc: 1
+names:
+  0: pothole
