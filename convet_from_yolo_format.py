@@ -36,3 +36,4 @@ for label in os.listdir(text_file_path):
                 with open('test_labels.csv', 'w') as f:
                     text =  'XMin' + ',' +  'YMin' + ',' +  'XMax' + ',' +  'YMax' + ',' +  'Conf' + ',' + 'pothole' + ',' + 'ImageID'
                     f.write(text)
+                    
