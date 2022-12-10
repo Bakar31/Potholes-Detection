@@ -15,7 +15,7 @@ for label in os.listdir(text_file_path):
     i_h = img.shape[0]
     i_w = img.shape[1]
 
-    with open(text_file_path + '/'+label,'r') as f:
+    with open(os.path.join(text_file_path,label), 'r') as f:
         lines = f.readlines()
         for line in lines:
             line = np.float32(line.split(" "))
