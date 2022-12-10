@@ -13,9 +13,6 @@ def yolo_extractor(row):
     h = labels.iloc[row].YMax - labels.iloc[row].YMin
     return label, cx, cy, w, h 
 
-row = 0
-label, cx, cy, w, h = yolo_extractor(row)
-
 for row in range(len(labels) - 1):
     # df = labels.loc[labels['ImageID'] == row]
     label, cx, cy, w, h = yolo_extractor(row)
