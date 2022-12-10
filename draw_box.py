@@ -1,6 +1,24 @@
-import cv2
+'''
+useage:
+------------------------------
+python draw_box.py --image 1
+-----------------------------
+or 
+-----------------------------
+python draw_box.py -i 1
+-----------------------------
 
-image_id = 1
+'''
+
+import cv2
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-i', '--image', type=str, required=True, help='Enter The Image Base-Name')
+args = parser.parse_args()
+
+
+image_id = args.image
 text_file = 'data\\labels\\train\\' + str(image_id) + '.txt'
 image_file = 'data\\images\\train\\' + str(image_id )+ '.jpg'
 
