@@ -1,6 +1,5 @@
 import os
 import pandas as pd
-import numpy as np
 import cv2
 
 labels = pd.read_csv('labels.csv')
@@ -39,3 +38,4 @@ for row in range(len(labels) - 1):
             text =  str(0) + ' ' +  str(cx) + ' ' +  str(cy) + ' ' +  str(w) + ' ' +  str(h)
             print(text)
             f.write(text)
+            
