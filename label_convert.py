@@ -42,9 +42,3 @@ for row in range(len(labels) - 1):
             text =  str(0) + ' ' +  str(cx) + ' ' +  str(cy) + ' ' +  str(w) + ' ' +  str(h)
             print(text)
             f.write(text)
-
-
-# img = cv2.imread('C:\\_Files\\Programming\\Deep Learning\\Potholes\\images\\1.jpg')
-# cv2.rectangle(img, (cx, cy), (cx+w, cy+h), (0, 0, 255), 2)
-# cv2.imshow('box', img)
-# cv2.waitKey(0)
