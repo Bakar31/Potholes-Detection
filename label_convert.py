@@ -9,8 +9,8 @@ def yolo_extractor(row):
     label = labels.iloc[row].ImageID[:-4]
     cx = (labels.iloc[row].XMin + labels.iloc[row].XMax)/2
     cy = (labels.iloc[row].YMin + labels.iloc[row].YMax)/2
-    w = (labels.iloc[row].XMax - labels.iloc[row].XMin)/2
-    h = (labels.iloc[row].YMax - labels.iloc[row].YMin)/2
+    w = labels.iloc[row].XMax - labels.iloc[row].XMin
+    h = labels.iloc[row].YMax - labels.iloc[row].YMin
     return label, cx, cy, w, h 
 
 row = 0
@@ -27,7 +27,7 @@ for row in range(len(labels) - 1):
     w = round((w/i_w), 6)
     h= round((h/i_h), 6)
     cx = round((cx/i_w), 6)
-    cy = round((cy/i_w), 6)
+    cy = round((cy/i_h), 6)
     # print(w, h, cx, cy)
 
     path = './data/labels/'
