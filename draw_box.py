@@ -19,13 +19,13 @@ args = parser.parse_args()
 
 
 image_id = args.image
-text_file = 'data\\labels\\train\\' + str(image_id) + '.txt'
-image_file = 'data\\images\\train\\' + str(image_id )+ '.jpg'
+text_file = 'data\\test_labels\\' + str(image_id) + '.txt'
+image_file = 'data\\test_images\\' + str(image_id )+ '.jpg'
 
 # load the image
 img = cv2.imread(image_file)
 with open(text_file, 'r') as f:
-    points = f.read()
+    points = f.read().rstrip()
 points = points.split('\n')
 
 for box in points:

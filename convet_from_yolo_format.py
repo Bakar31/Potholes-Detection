@@ -3,18 +3,19 @@ import cv2
 import numpy as np
 
 
-text_file_path = './data/labels/test'
-img_file_path = './data/images/test'
+text_file_path = 'data/test_labels'
+img_file_path = 'data/test_images'
 
 
 for label in os.listdir(text_file_path):
     label_name = label.split('.')[0]
+    print(label)
     ImageID = f'{label_name}.jpg'
     img = cv2.imread(os.path.join(img_file_path,ImageID))
     i_h = img.shape[0]
     i_w = img.shape[1]
 
-    with open(label,'r') as f:
+    with open(text_file_path + '/'+label,'r') as f:
         lines = f.readlines()
         for line in lines:
             line = np.float32(line.split(" "))
@@ -34,6 +35,6 @@ for label in os.listdir(text_file_path):
                     f.write(text)
             else:
                 with open('test_labels.csv', 'w') as f:
-                    text =  'XMin' + ',' +  'YMin' + ',' +  'XMax' + ',' +  'YMax' + ',' +  'Conf' + ',' + 'pothole' + ',' + 'ImageID'
+                    text =  'XMin' + ',' +  'YMin' + ',' +  'XMax' + ',' +  'YMax' + ',' +  'Conf' + ',' + 'LabelName' + ',' + 'ImageID'
                     f.write(text)
                     
