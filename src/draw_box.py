@@ -1,11 +1,11 @@
 '''
 useage:
 ------------------------------
-python draw_box.py --image 1
+python src/draw_box.py --image 1
 -----------------------------
 or 
 -----------------------------
-python draw_box.py -i 1
+python src/draw_box.py -i 1
 -----------------------------
 
 '''
