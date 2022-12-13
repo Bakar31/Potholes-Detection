@@ -19,8 +19,8 @@ args = parser.parse_args()
 
 
 image_id = args.image
-text_file = 'data\\test_labels\\' + str(image_id) + '.txt'
-image_file = 'data\\test_images\\' + str(image_id )+ '.jpg'
+text_file = './data/train/labels/train/' + str(image_id) + '.txt'
+image_file = './data/train/images/train/' + str(image_id )+ '.jpg'
 
 # load the image
 img = cv2.imread(image_file)
