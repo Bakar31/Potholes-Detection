@@ -5,7 +5,7 @@ import os
 
 files = os.listdir('data/train/labels/train')
 # print(files)
-for file in files[290:320]:
+for file in files[0:5]:
     print(file)
     bboxes = []
     text_path = './data/train/labels/train/' + file
@@ -27,7 +27,7 @@ for file in files[290:320]:
     category_id_to_name = {0: 'pohole'}
 
     transform = A.Compose([
-        # A.GlassBlur(sigma=0.7,iterations=2, always_apply=True),
+        A.GlassBlur(sigma=0.7,iterations=2, always_apply=True),
         # A.RandomRain(always_apply=True),
         # A.RandomBrightness(always_apply=True) 
         # A.RandomFog()?
@@ -60,7 +60,7 @@ for file in files[290:320]:
     # cv2.imshow('aug', transformed_image)
     # cv2.waitKey(0)
 
-    dest_text = './data/augmented/labels/' + file
+    dest_text = './data/augmented/labels/' + file[:-4] + '_aug.txt'
     dest_img = './data/augmented/images/' + file[:-4] + '_aug.jpg'
     cv2.imwrite(dest_img, transformed_image)
     with open(dest_text, 'w') as f:

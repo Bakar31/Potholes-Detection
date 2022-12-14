@@ -19,7 +19,7 @@ args = parser.parse_args()
 
 
 image_id = args.image
-text_file = './data/augmented/labels/' + str(image_id) + '.txt'
+text_file = './data/augmented/aug_labels/' + str(image_id) + '.txt'
 image_file = './data/augmented/images/' + str(image_id )+ '.jpg'
 
 # load the image
