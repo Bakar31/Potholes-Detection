@@ -8,7 +8,6 @@ files = os.listdir('data/train/labels/val')
 try:
     # print(files)
     for file in files:
-        print(file)
         bboxes = []
         text_path = './data/train/labels/val/' + file
         img_path = './data/train/images/val/' + file[:-4] + '.jpg'
