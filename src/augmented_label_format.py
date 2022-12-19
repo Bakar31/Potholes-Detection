@@ -3,7 +3,6 @@ import os
 files = os.listdir('data/augmented/labels/')
 for file in files:
     file_path = 'data/augmented/labels/' + file
-    # print(file)
 
     try:
         with open(file_path, 'r') as f:
