@@ -17,7 +17,7 @@ Tranning hyperparameters:
 - conf: 0.005
 
 ## Final Result:
- - Leaderboard Standing: `6th among 1145 teams`
+ - Leaderboard Standing: [`6th among 1145 teams`](https://datahack.analyticsvidhya.com/contest/dataverse-hack/#LeaderBoard)
  - Final Score: 0.4357561564 (Team name: `Caraxes`)
 
 ## Sample detection:
