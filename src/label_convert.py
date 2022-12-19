@@ -13,7 +13,6 @@ def yolo_extractor(row):
     return label, cx, cy, w, h 
 
 for row in range(len(labels) - 1):
-    # df = labels.loc[labels['ImageID'] == row]
     label, cx, cy, w, h = yolo_extractor(row)
     image_path = os.path.join('img',f'{label}.jpg')
     image = cv2.imread(image_path)
