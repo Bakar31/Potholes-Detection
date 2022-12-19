@@ -17,12 +17,12 @@ def trasform(path):
     # cv2.waitKey(0) 
     return blurred
 
-path= 'pothole-dataset\\train\\images\\train\\'
-val_path= 'pothole-dataset\\train\\images\\val\\'
-test_path = 'pothole-dataset\\test\\images\\'
-destination = 'gray_data\\train\\images\\train\\'
-val_destination = 'gray_data\\train\\images\\val\\'
-test_destination = 'gray_data\\test\\images\\'
+path= 'pothole-dataset/train/images/train/'
+val_path= 'pothole-dataset/train/images/val/'
+test_path = 'pothole-dataset/test/images/'
+destination = 'gray_data/train/images/train/'
+val_destination = 'gray_data/train/images/val/'
+test_destination = 'gray_data/test/images/'
 
 for image in os.listdir(test_path):
     im_path = test_path + image
