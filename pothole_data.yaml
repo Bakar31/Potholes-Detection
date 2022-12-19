@@ -1,0 +1,11 @@
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+train: /content/drive/MyDrive/Potholes/dataset/images/train  # 118287 images
+val: /content/drive/MyDrive/Potholes/dataset/images/val  # 5000 images
+test: /content/drive/MyDrive/Potholes/dataset/test_images
+
+
+# number of classes
+nc: 1
+
+# class names
+names: [ 'pothole' ]
